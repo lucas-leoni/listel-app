@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('./partials/head.ejs') %>
+<body>
+
+<%- include('./partials/navbar.ejs') %>
+
+<h5 class="listel-add">Listel | Add</h5>
+
+<form action="/salvar-ponto" method="POST">
+    <div class="form-add">
+        <h5 class="descricao-form">Dados Gerais</h5>
+        <div class="form-row">
+            <div class="col-3">
+              <label for=""><b>Razão Social:</b></label>  
+              <input name="razao" type="text" class="form-control" placeholder="João Carlos ME">
+            </div>
+            <div class="col-3">
+              <label for=""><b>Inscrição Estadual:</b></label>
+              <input name="inscricao" type="text" class="form-control" placeholder="Pizzaria Glória">
+            </div>
+            <div class="col-3">
+              <label for=""><b>CNPJ ou CPF:</b></label>
+              <input name="cnpj_cpf" type="text" class="form-control" placeholder="999.999.999-99">
+            </div>
+            <div class="col-3">
+              <label for=""><b>IE ou RG:</b></label>
+              <input name="ie_rg" type="text" class="form-control" placeholder="99.999.999-9">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-3">
+                <label for=""><b>Nome Fantasia:</b></label>  
+                <input name="nome" type="text" class="form-control" placeholder="Beer Ville">
+            </div>
+            <div class="col-3">
+                <label for=""><b>Responsável:</b></label>
+                <input name="responsavel" type="text" class="form-control" placeholder="João Carlos Teixeira">
+            </div>
+            <div class="col-3">
+                <label for=""><b>Tel. Fixo/Celular:</b></label>
+                <input name="telefone" type="text" class="form-control" placeholder="(47)99999-9999">
+            </div>
+            <div class="col-3">
+                <label for=""><b>E-mail:</b></label>
+                <input name="email" type="text" class="form-control" placeholder="xpto@terra.com">
+            </div>
+        </div>
+    </div>
+    <div class="form-add">
+        <h5 class="descricao-form">Endereço</h5>
+        <div class="form-row">
+            <div class="col-3">
+              <label for=""><b>Rua:</b></label>  
+              <input name="rua" type="text" class="form-control" placeholder="Rua Antonio Lopes">
+            </div>
+            <div class="col-3">
+              <label for=""><b>Número:</b></label>
+              <input name="numero" type="text" class="form-control" placeholder="333">
+            </div>
+            <div class="col-3">
+              <label for=""><b>Complemento:</b></label>
+              <input name="complemento" type="text" class="form-control" placeholder="Mercado Freitas">
+            </div>
+            <div class="col-3">
+              <label for=""><b>Bairro:</b></label>
+              <input name="bairro" type="text" class="form-control" placeholder="Santa Angelina">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-3">
+                <label for=""><b>Cidade:</b></label>  
+                <input name="cidade" type="text" class="form-control" placeholder="Joinville">
+            </div>
+            <div class="col-3">
+                <label for=""><b>Estado:</b></label>
+                <input name="estado" type="text" class="form-control" placeholder="SC">
+            </div>
+            <div class="col-3">
+                <label for=""><b>CEP:</b></label>
+                <input name="cep" type="text" class="form-control" placeholder="893229-000">
+            </div>
+        </div>
+    </div>
+    <div class="form-add">
+        <h5 class="descricao-form">Social</h5>
+        <div class="row">
+            <div class="col-2">
+                <div class="div-img-2">
+                    <i class="fa fa-picture-o fa-3x" id="img" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col">
+                    <label for=""><i class="fa fa-globe fa-lg" aria-hidden="true"></i><b> Url</b></label>  
+                    <input name="url" type="text" class="form-control" placeholder="https://xpto.com.br">
+                </div>
+                <div class="col">
+                    <label for=""><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><b> Facebook</b></label>  
+                    <input name="facebook" type="text" class="form-control" placeholder="facebook.com/xpto">
+                </div>
+                <div class="col">
+                    <label for=""><i class="fa fa-youtube fa-lg" aria-hidden="true"></i><b> Youtube</b></label>  
+                    <input name="youtube" type="text" class="form-control" placeholder="youtube.com/xpto">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col">
+                    <label for=""><i class="fa fa-instagram fa-lg" aria-hidden="true"></i><b> Instagram</b></label>  
+                    <input name="instagram" type="text" class="form-control" placeholder="Instagram.com/xpto">
+                </div>
+                <div class="col">
+                    <label for=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i><b> Twitter</b></label>  
+                    <input name="twitter" type="text" class="form-control" placeholder="twitter.com/xpto">
+                </div>
+                <div class="col">
+                    <label for=""><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i><b> WhatsApp</b></label>  
+                    <input name="whatsapp" type="text" class="form-control" placeholder="(47)99333-3389">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col">
+                    <label for=""><i class="fa fa-hashtag fa-lg" aria-hidden="true"></i><b> Tags</b></label>  
+                    <textarea class="form-control" name="tags" placeholder="bolo, 
+arroz, 
+uva, 
+pastel" rows="7"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submit">
+        <a href="/">
+            <button type="button" class="btn btn-secondary">Cancelar</button>
+        </a>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+</form>    
+
+<nav class="navbar navbar-light bg-white" id="footer">
+    <span>ListelApp <i class="fa fa-copyright" aria-hidden="true"></i> 2021 | IELUSC - Tecnólogo em Sistemas para Internet by Lucas Leoni</span>
+</nav>
+
+<%- include('./partials/footer.ejs') %>
+</body>
+</html>
