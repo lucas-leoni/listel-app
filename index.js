@@ -20,10 +20,6 @@ connection
 const Estabelecimento = require('./database/Estabelecimento');
 
 app.get('/', (req, res) => {
-  res.render('index');
-});
-
-app.get('/', (req, res) => {
   Estabelecimento.findAll({
     raw: true, 
     order: [[ 'id', 'DESC']]
