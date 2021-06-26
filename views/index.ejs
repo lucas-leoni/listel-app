@@ -5,7 +5,7 @@
 
 <%- include('./partials/navbar.ejs') %>
 
-<div>
+<div style="padding: 0px 0px 90px 0px;">
     <% estabelecimento.forEach(estabelecimento => { %>
         <div class="estabelecimento">
             <div class="row">
@@ -51,7 +51,7 @@
     <% }); %> 
 </div>
 
-<nav class="navbar navbar-light bg-white" id="footer-fixed">
+<nav class="navbar navbar-light bg-white fixed-bottom" id="footer-fixed">
     <span>ListelApp <i class="fa fa-copyright" aria-hidden="true"></i> 2021 | IELUSC - Tecnólogo em Sistemas para Internet by Lucas Leoni</span>
 </nav>
 
