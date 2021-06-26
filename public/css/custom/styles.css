@@ -104,6 +104,10 @@ h6 {
     margin: 15px 0px 15px 0px;
 }
 
+h6 a {
+    color: black;
+}
+
 .estabelecimento .row {
     display: flex;
     align-items: center;
@@ -113,4 +117,32 @@ h6 {
 #visualizar {
     display: flex;
     justify-content: flex-end;
+}
+
+#feedback, #textarea-feedback {
+    border: none;
+    padding: 25px 50px 0px 50px;
+}
+
+#textarea-feedback {
+    margin: 0px 0px 30px 10px;
+}
+
+#criticas {
+    margin: 20px 0px 0px 60px;
+}
+
+#submit-feedback {
+    margin: 10px 50px 10px 60px;
+    padding: 25px 0px 25px 0px;
+    border-bottom: 2px solid darkgray;
+}
+
+#depoimentos {
+    border: none;
+    padding: 0px 50px 0px 50px;
+}
+
+#h5-depoimentos {
+    padding: 0px 0px 10px 5px;
 }

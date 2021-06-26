@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
   Estabelecimento.findAll({
     raw: true, 
     order: [[ 'id', 'DESC']]
-  }).then((estabelecimentos) => {
+  }).then((estabelecimento) => {
     res.render('index', {
-      estabelecimentos: estabelecimentos
+      estabelecimento: estabelecimento
     });
   });
 });
@@ -86,6 +86,19 @@ app.post('/salvar-ponto', (req, res) => {
     res.redirect('/');
   }).catch((error) => {
     console.error(`Ocorreu um erro ao salvar seus dados -  ${error}`);
+  });
+});
+
+app.get('/listar/:id', (req, res) => {
+  const {id} = req.params;
+  Estabelecimento.findAll({
+    raw: true, 
+    where: {id: id}
+  }).then((estabelecimento) => {
+    console.log(estabelecimento)
+    res.render('listar', {
+      estabelecimento: estabelecimento
+    });
   });
 });
 
