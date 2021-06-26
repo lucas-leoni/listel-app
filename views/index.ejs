@@ -5,6 +5,52 @@
 
 <%- include('./partials/navbar.ejs') %>
 
+<div>
+    <% estabelecimentos.forEach(estabelecimento => { %>
+        <div class="estabelecimento">
+            <div class="row">
+                <div class="col-1">
+                    <div class="div-img-3">
+                        <i class="fa fa-user fa-3x" id="img" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="col">
+                        <h5 class="descricao"><%= estabelecimento.nome_fantasia %></h5>
+                        <h6>Tel: <%= estabelecimento.telefone %></h6>
+                        <h6>Cel: <%= estabelecimento.telefone %> <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></h6>
+                        <h6 class="tags"><%= estabelecimento.tags %></h6>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="col">
+                        <h5 class="descricao">Mídias</h5>
+                        <h6><i class="fa fa-instagram fa-lg" aria-hidden="true"></i> <%= estabelecimento.instagram %></h6>
+                        <h6><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> <%= estabelecimento.facebook %></h6>
+                        <h6><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> <%= estabelecimento.twitter %></h6>
+                        <h6><i class="fa fa-youtube fa-lg" aria-hidden="true"></i> <%= estabelecimento.youtube %></h6>
+                        
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="col">
+                        <h5 class="descricao">Endereço</h5>
+                        <h6><%= estabelecimento.rua %>, <%= estabelecimento.numero %></h6>
+                        <h6><%= estabelecimento.bairro %></h6>
+                        <h6><%= estabelecimento.cidade %> - <%= estabelecimento.estado %></h6>
+                        <h6><%= estabelecimento.cep %></h6>
+                    </div>
+                </div>
+                <div class="col-1" id="visualizar">
+                    <a href="/">
+                        <button type="button" class="btn btn-primary">Visualizar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <% }); %> 
+</div>
+
 <nav class="navbar navbar-light bg-white" id="footer-fixed">
     <span>ListelApp <i class="fa fa-copyright" aria-hidden="true"></i> 2021 | IELUSC - Tecnólogo em Sistemas para Internet by Lucas Leoni</span>
 </nav>
